@@ -6,10 +6,10 @@ export class User {
     @PrimaryGeneratedColumn("uuid")
     id: number
 
-    @Column({ nullable: true, name: "first_Name" })
+    @Column({ nullable: true, name: "first_name" })
     firstName: string;
 
-    @Column({ nullable: true, name: "last_Name" })
+    @Column({ nullable: true, name: "last_name" })
     lastName: string;
 
     @Column({ nullable: true, name: "age" })

@@ -4,11 +4,17 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './User/user.module';
 import { config as dotenv } from "dotenv"
+import { DepartmentModule } from './Department/department.module';
+import { SubdepartmentModule } from './Subdepartment/subdepartment.module';
+import { ItemModule } from './Item/item.module';
 dotenv({ path: '.env' });
 
 @Module({
   imports: [
     UserModule,
+    DepartmentModule,
+    SubdepartmentModule,
+    ItemModule,
     TypeOrmModule.forRootAsync({
     useFactory: () => {
       return {
