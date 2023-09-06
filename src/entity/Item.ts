@@ -40,4 +40,7 @@ export class Item {
 
     @OneToMany(() => Option, (options) => options.item)
     options: Option[];
+
+    @Column({ nullable: true, name: "image"})
+    image: string;
 }
